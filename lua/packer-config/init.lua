@@ -10,6 +10,7 @@ return require'packer'.startup(function()
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
     use 'mhinz/vim-signify'
     use 'voldikss/vim-floaterm'
+    use 'jiangmiao/auto-pairs'
 end)
 
 
