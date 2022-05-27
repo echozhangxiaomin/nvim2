@@ -1,4 +1,5 @@
 vim.opt.autowrite = true
+vim.opt.confirm = true
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.tabstop = 4
