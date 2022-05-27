@@ -8,3 +8,9 @@ vim.api.nvim_set_keymap('n','<leader>f',':Telescope find_files<CR>',{noremap = t
 vim.api.nvim_set_keymap('n','<C-r>',':Telescope<CR>',{noremap =true,silent = true})
 vim.api.nvim_set_keymap('n','<M-x>',':Telescope<CR>',{noremap =true,silent = true})
 vim.api.nvim_set_keymap('n','-','$',{noremap = true,silent = true})
+vim.api.nvim_set_keymap('n','<leader>s',':FloatermToggle<CR>',{noremap = true,silent = true})
+vim.api.nvim_set_keymap('n','H',':vertical resize+10<CR>',{noremap = true,silent = true})
+vim.api.nvim_set_keymap('n','J',':resize-10<CR>',{noremap = true,silent = true})
+vim.api.nvim_set_keymap('n','K',':resize+10<CR>',{noremap = true,silent = true})
+vim.api.nvim_set_keymap('n','L',':vertical resize-10<CR>',{noremap = true,silent = true})
+

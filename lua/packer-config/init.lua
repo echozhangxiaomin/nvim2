@@ -8,6 +8,8 @@ return require'packer'.startup(function()
     use 'nvim-treesitter/nvim-treesitter-refactor'
     use {'nvim-orgmode/orgmode', config = function() require('orgmode').setup{} end }
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+    use 'mhinz/vim-signify'
+    use 'voldikss/vim-floaterm'
 end)
 
 
