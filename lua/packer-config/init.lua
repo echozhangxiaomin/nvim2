@@ -9,6 +9,7 @@ return require 'packer'.startup(function()
     use { 'nvim-orgmode/orgmode', config = function() require('orgmode').setup {} end }
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
     use 'mhinz/vim-signify'
+    use 'tpope/vim-fugitive'
     use 'voldikss/vim-floaterm'
     use 'jiangmiao/auto-pairs'
 end)
