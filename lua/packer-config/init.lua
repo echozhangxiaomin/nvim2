@@ -12,4 +12,5 @@ return require 'packer'.startup(function()
     use 'tpope/vim-fugitive'
     use 'voldikss/vim-floaterm'
     use 'jiangmiao/auto-pairs'
+    use 'tpope/vim-commentary'
 end)

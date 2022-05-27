@@ -10,6 +10,8 @@ vim.api.nvim_set_keymap('n', '<M-x>', '<cmd>Telescope<CR>', { noremap = true, si
 vim.api.nvim_set_keymap('n', '-', '$', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>s', '<cmd>FloatermToggle <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>g', '<cmd>FloatermNew --width=0.8 --height=0.8 lazygit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>/', '<cmd>Commentary<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<space>/', '<cmd>Commentary<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<esc>', '<C-\\><C-n>', { silent = true })
 vim.api.nvim_set_keymap('n', 'H', '<cmd>vertical resize+10<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'J', '<cmd>resize-10<CR>', { noremap = true, silent = true })
