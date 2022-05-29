@@ -35,6 +35,7 @@ local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         on_attach = on_attach,
+        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
         flags = {
             -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,
@@ -46,6 +47,7 @@ end
 require 'lspconfig'.jdtls.setup {
     on_attach = on_attach,
     cmd = { 'jdtls' },
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
     root_dir = function(fname)
         return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
     end
@@ -56,4 +58,38 @@ require 'lspconfig'.sumneko_lua.setup {
     on_attach = on_attach,
     single_file_support = true,
     cmd = { 'lua-language-server' },
+}
+
+-- nvim-cmp setup
+require('cmp').setup {
+    snippet = {
+        expand = function(args)
+            require 'luasnip'.lsp_expand(args.body)
+        end,
+    },
+    mapping = require 'cmp'.mapping.preset.insert({
+        ['<C-d>'] = require 'cmp'.mapping.scroll_docs(-4),
+        ['<C-f>'] = require 'cmp'.mapping.scroll_docs(4),
+        ['<C-Space>'] = require 'cmp'.mapping.complete(),
+        ['<C-e>'] = require 'cmp'.mapping.abort(),
+        ['<CR>'] = require 'cmp'.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<Tab>'] = require 'cmp'.mapping(function(fallback)
+            if require 'cmp'.visible() then
+                require 'cmp'.select_next_item()
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = require 'cmp'.mapping(function(fallback)
+            if require 'cmp'.visible() then
+                require 'cmp'.select_prev_item()
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+    }),
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+    },
 }
