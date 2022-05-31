@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
