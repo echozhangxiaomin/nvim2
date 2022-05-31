@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 
 vim.api.nvim_set_keymap('n', '<c-s>', ':w<CR>', {})
 vim.api.nvim_set_keymap('n', ';', ':', {})
+vim.api.nvim_set_keymap('i', '<c-j>', 'copilot#Accept("\\<CR>")', {silent = true,script = true,expr = true})
 vim.api.nvim_set_keymap('i', '<c-s>', '<ESC>:w<CR>a', {})
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files prompt_prefix=🔍 <CR>', { noremap = true, silent = true })
