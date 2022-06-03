@@ -5,6 +5,7 @@ return require 'packer'.startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use 'rcarriga/nvim-notify'
     use 'nvim-lualine/lualine.nvim'
+    use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-refactor'

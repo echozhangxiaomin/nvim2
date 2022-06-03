@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
