@@ -10,6 +10,7 @@ vim.api.nvim_set_keymap('i', '<c-b>', '<left>', { noremap = true, silent = true,
 vim.api.nvim_set_keymap('i', '<c-f>', '<right>', { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap('i', '<c-k>', '<C-o>D', { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap('i', '<c-e>', '<end>', { noremap = true, silent = true, nowait = true })
+vim.api.nvim_set_keymap('i', '<c-a>', '<home>', { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files prompt_prefix=🔍 <CR>', { noremap = true, silent = true })
