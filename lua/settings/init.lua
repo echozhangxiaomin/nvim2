@@ -2,6 +2,7 @@ vim.opt.autowrite = true
 vim.opt.confirm = true
 vim.opt.expandtab = true
 vim.opt.smarttab = true
+vim.opt.backspace = 'indent,eol,start'
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.hlsearch = true
