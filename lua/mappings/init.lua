@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 
 vim.api.nvim_set_keymap('n', '<c-s>', ':w<CR>', {})
-vim.api.nvim_set_keymap('n', ';', ':', {})
+vim.api.nvim_set_keymap('n', ';', ':', { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap('i', '<c-j>', 'copilot#Accept("\\<CR>")', { silent = true, script = true, expr = true })
 vim.api.nvim_set_keymap('i', '<c-s>', '<ESC>:w<CR>a', {})
 vim.api.nvim_set_keymap('i', '<c-p>', '<up>', { noremap = true, silent = true, nowait = true })
