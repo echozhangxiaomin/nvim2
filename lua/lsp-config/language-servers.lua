@@ -79,14 +79,14 @@ require('cmp').setup {
         ['<C-Space>'] = require 'cmp'.mapping.complete(),
         ['<C-e>'] = require 'cmp'.mapping.abort(),
         ['<CR>'] = require 'cmp'.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ['<Tab>'] = require 'cmp'.mapping(function(fallback)
+        ['<C-n>'] = require 'cmp'.mapping(function(fallback)
             if require 'cmp'.visible() then
                 require 'cmp'.select_next_item()
             else
                 fallback()
             end
         end, { 'i', 's' }),
-        ['<S-Tab>'] = require 'cmp'.mapping(function(fallback)
+        ['<C-p>'] = require 'cmp'.mapping(function(fallback)
             if require 'cmp'.visible() then
                 require 'cmp'.select_prev_item()
             else
