@@ -23,4 +23,5 @@ return require 'packer'.startup(function()
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'github/copilot.vim'
     use 'editorconfig/editorconfig-vim'
+    use 'vim-scripts/taglist.vim'
 end)
