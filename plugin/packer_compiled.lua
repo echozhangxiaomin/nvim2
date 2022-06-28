@@ -104,6 +104,12 @@ _G.packer_plugins = {
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
     url = "https://github.com/editorconfig/editorconfig-vim"
   },
+  ["goto-preview"] = {
+    config = { "\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0" },
+    loaded = true,
+    path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/goto-preview",
+    url = "https://github.com/rmagatti/goto-preview"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -150,7 +156,6 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["org-bullets.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15checkboxes\ttodo\1\3\0\0\a˟\fOrgTODO\tdone\1\3\0\0\b✓\fOrgDone\14cancelled\1\0\0\1\3\0\0\b\17OrgCancelled\fsymbols\1\0\0\1\5\0\0\b◉\b○\b✸\b✿\nsetup\16org-bullets\frequire\0" },
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/org-bullets.nvim",
     url = "https://github.com/akinsho/org-bullets.nvim"
@@ -170,6 +175,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["taglist.vim"] = {
+    loaded = true,
+    path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/taglist.vim",
+    url = "https://github.com/vim-scripts/taglist.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -191,6 +201,11 @@ _G.packer_plugins = {
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
+  },
   ["vim-signify"] = {
     loaded = true,
     path = "/Users/lingoace/.local/share/nvim/site/pack/packer/start/vim-signify",
@@ -199,10 +214,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: org-bullets.nvim
-time([[Config for org-bullets.nvim]], true)
-try_loadstring("\27LJ\2\n�\1\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15checkboxes\ttodo\1\3\0\0\a˟\fOrgTODO\tdone\1\3\0\0\b✓\fOrgDone\14cancelled\1\0\0\1\3\0\0\b\17OrgCancelled\fsymbols\1\0\0\1\5\0\0\b◉\b○\b✸\b✿\nsetup\16org-bullets\frequire\0", "config", "org-bullets.nvim")
-time([[Config for org-bullets.nvim]], false)
+-- Config for: goto-preview
+time([[Config for goto-preview]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0", "config", "goto-preview")
+time([[Config for goto-preview]], false)
 -- Config for: orgmode
 time([[Config for orgmode]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\forgmode\frequire\0", "config", "orgmode")
