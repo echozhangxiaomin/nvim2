@@ -9,4 +9,12 @@ require('telescope').setup({
         path_display = { shorten = 1 }
     },
     -- other configuration values here
+    pickers = {
+        find_files = {
+            theme = "ivy",
+            previewer = false,
+        }
+    },
+    extensions = {
+    }
 })
