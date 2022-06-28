@@ -14,6 +14,7 @@ return require 'packer'.startup(function()
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
     use 'voldikss/vim-floaterm'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-commentary'
