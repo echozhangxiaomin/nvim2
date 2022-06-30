@@ -10,6 +10,7 @@ return require 'packer'.startup(function()
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-refactor'
     use { 'nvim-orgmode/orgmode', config = function() require('orgmode').setup {} end }
+    use { 'lukas-reineke/headlines.nvim', config = function() require('headlines').setup() end, }
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
     use { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end }
     use 'mhinz/vim-signify'
