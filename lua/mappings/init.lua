@@ -17,7 +17,7 @@ map('i', '<c-j>', 'copilot#Accept("\\<CR>")', { silent = true, expr = true, scri
 map('i', '<c-s>', '<ESC>:w<CR>a', opts)
 map('i', '<c-k>', '<C-o>D', opts)
 map('i', '<M-d>', '<C-o>dw', opts)
-map('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', opts)
+map('n', '<leader>n', '<cmd>NvimTreeFindFileToggle<CR>', opts)
 map('n', '<leader>r', '<cmd>Telescope live_grep<CR>', opts)
 map('n', '<C-q>', '<cmd>Telescope find_files prompt_prefix=🔍 <CR>', opts)
 map('n', '<leader>f', '<cmd>Telescope find_files prompt_prefix=🔍 <CR>', opts)
