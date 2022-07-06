@@ -65,6 +65,7 @@ vim.cmd('inoremap <C-k> <C-o>D')
 vim.cmd('inoremap <M-d> <C-o>dw')
 vim.cmd('inoremap <M-f> <S-right>')
 vim.cmd('inoremap <M-b> <S-left>')
+-- comment the c-w , or c-h ,or c-u delete char forward
 
 vim.cmd('cnoremap <C-a> <home>')
 vim.cmd('cnoremap <C-b> <left>')
