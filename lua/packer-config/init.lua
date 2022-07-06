@@ -16,6 +16,7 @@ return require 'packer'.startup(function()
     use { 'nvim-orgmode/orgmode', config = function() require('orgmode').setup {} end }
     use { 'lukas-reineke/headlines.nvim', config = function() require('headlines').setup() end, }
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
+    use {"williamboman/nvim-lsp-installer", requires = { { "nvim-lua/lsp-status.nvim" } }}
     use { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end }
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'

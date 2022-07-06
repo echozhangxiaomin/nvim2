@@ -49,7 +49,17 @@ require 'lspconfig'.rls.setup {
     single_file_support = true,
     cmd = { "rustup", "run", "stable", "rls" },
 }
-
+-- use the lspinstall plugin to install the lsp , and the position is ~/.local/share/nvim/lsp-server.
+-- this is need to remember to add the following to your path : the command of lemminx add the path .
+-- you must write more and more . then you understand the lsp .
+require 'lspconfig'.lemminx.setup {
+    on_attach = on_attach,
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    flags = {
+        -- This will be the default in neovim 0.7+
+        debounce_text_changes = 150,
+    }
+}
 require 'lspconfig'.jdtls.setup {
     on_attach = on_attach,
     cmd = { 'jdtls' },
@@ -100,3 +110,16 @@ require('cmp').setup {
         { name = 'org' },
     },
 }
+
+
+-- nvim-lsp-status setup
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
