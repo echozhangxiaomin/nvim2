@@ -3,6 +3,8 @@ return require 'packer'.startup(function()
     use 'wbthomason/packer.nvim'
     -- theme settings
     use 'EdenEast/nightfox.nvim'
+    -- which key
+    use 'linty-org/key-menu.nvim'
     -- nerdtree settings
     use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
@@ -16,7 +18,11 @@ return require 'packer'.startup(function()
     use { 'nvim-orgmode/orgmode', config = function() require('orgmode').setup {} end }
     use { 'lukas-reineke/headlines.nvim', config = function() require('headlines').setup() end, }
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
-    use {"williamboman/nvim-lsp-installer", requires = { { "nvim-lua/lsp-status.nvim" } }}
+    -- not use the the installer you can use the os software manager such as brew and apt-get to install the lsp client
+    -- and the best way is the most simple way 
+    -- use {"williamboman/nvim-lsp-installer", requires = { { "nvim-lua/lsp-status.nvim" } }}
+    -- java language support and now question can not open the source file and use the vim config and can open the file 
+    use 'mfussenegger/nvim-jdtls'
     use { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end }
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'
