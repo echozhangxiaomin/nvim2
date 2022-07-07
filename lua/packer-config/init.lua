@@ -22,19 +22,21 @@ return require 'packer'.startup(function()
     -- and the best way is the most simple way 
     -- use {"williamboman/nvim-lsp-installer", requires = { { "nvim-lua/lsp-status.nvim" } }}
     -- java language support and now question can not open the source file and use the vim config and can open the file 
-    use 'mfussenegger/nvim-jdtls'
+    -- and more and more configuration use the extensions and not use the vim configuration 
+    -- use 'mfussenegger/nvim-jdtls'
     use { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end }
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
-    -- terminal
+    -- terminal and use the <cmd>terminal is useful and can be used to open the terminal and use the Chinese language
     use 'voldikss/vim-floaterm'
     use 'jiangmiao/auto-pairs'
     -- comment
     use 'tpope/vim-commentary'
-    -- Autocompletion plugin
+    -- Autocompletion plugin and the implementation of the plugin is based on the scripts and language server 
     use 'hrsh7th/nvim-cmp' 
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    -- the lua scripts is used to implement the lua language support and the lua language server is used to implement the lua language support
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     -- code completion
