@@ -23,7 +23,7 @@ return require 'packer'.startup(function()
     -- use {"williamboman/nvim-lsp-installer", requires = { { "nvim-lua/lsp-status.nvim" } }}
     -- java language support and now question can not open the source file and use the vim config and can open the file 
     -- and more and more configuration use the extensions and not use the vim configuration 
-    -- use 'mfussenegger/nvim-jdtls'
+    use 'mfussenegger/nvim-jdtls'
     use { 'rmagatti/goto-preview', config = function() require('goto-preview').setup {} end }
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'

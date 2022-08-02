@@ -60,9 +60,11 @@ require 'lspconfig'.lemminx.setup {
         debounce_text_changes = 150,
     }
 }
+
 require 'lspconfig'.jdtls.setup {
     on_attach = on_attach,
-    cmd = { 'jdtls' },
+    -- this -data parameter is important and solve the non-project file question
+    cmd = { 'jdtls','-data','/Users/xm/.jdtls'},
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
     root_dir = function(fname)
         return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
