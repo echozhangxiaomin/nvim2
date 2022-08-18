@@ -61,4 +61,5 @@ command! -buffer JdtJshell lua require('jdtls').jshell(),
   ]] ,
     false
 )
- vim.cmd("set makeprg=java")
+
+vim.cmd("set makeprg=java")
