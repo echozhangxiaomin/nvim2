@@ -11,7 +11,7 @@ require('telescope').setup({
     -- other configuration values here
     pickers = {
         find_files = {
-            theme = "ivy",
+            theme = "dropdown",
             previewer = false,
         }
     },

@@ -40,7 +40,7 @@ return require 'packer'.startup(function()
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     -- code completion
-    use 'github/copilot.vim'
+    -- use 'github/copilot.vim'
     use 'editorconfig/editorconfig-vim'
     -- tags
     use 'vim-scripts/taglist.vim'

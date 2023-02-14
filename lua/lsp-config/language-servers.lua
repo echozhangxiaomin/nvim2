@@ -35,7 +35,7 @@ local servers = { 'pyright', 'tsserver' }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         on_attach = on_attach,
-        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+        capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
         flags = {
             -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,
@@ -54,25 +54,25 @@ require 'lspconfig'.rls.setup {
 -- you must write more and more . then you understand the lsp .
 require 'lspconfig'.lemminx.setup {
     on_attach = on_attach,
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     flags = {
         -- This will be the default in neovim 0.7+
         debounce_text_changes = 150,
     }
 }
 
--- require 'lspconfig'.jdtls.setup {
---     on_attach = on_attach,
---     -- this -data parameter is important and solve the non-project file question
---     cmd = { 'jdtls','-data','/Users/xm/.jdtls'},
---     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
---     root_dir = function(fname)
---         return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
---     end
--- }
+require 'lspconfig'.jdtls.setup {
+    on_attach = on_attach,
+    -- this -data parameter is important and solve the non-project file question
+    cmd = { 'jdtls','-data','/Users/xm/.jdtls'},
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    root_dir = function(fname)
+        return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
+    end
+}
 
 
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
     on_attach = on_attach,
     single_file_support = true,
     cmd = { 'lua-language-server' },
