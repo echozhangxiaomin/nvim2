@@ -61,16 +61,24 @@ require 'lspconfig'.lemminx.setup {
     }
 }
 
-require 'lspconfig'.jdtls.setup {
-    on_attach = on_attach,
-    -- this -data parameter is important and solve the non-project file question
-    cmd = { 'jdtls','-data','/Users/xm/.jdtls'},
-    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-    root_dir = function(fname)
-        return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
+-- require 'lspconfig'.jdtls.setup {
+--     on_attach = on_attach,
+--     -- this -data parameter is important and solve the non-project file question
+--     cmd = { 'jdtls','-data','/Users/xm/.jdtls'},
+--     capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+--     root_dir = function(fname)
+--         return require 'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
+--     end
+-- }
+
+require'lspconfig'.kotlin_language_server.setup{
+    cmd = {'kotlin-language-server'},
+    on_attach = function(client)
+        -- 可选：在 KLS 连接时执行自定义设置
+        -- 例如：设置文件保存时自动格式化代码
+        vim.api.nvim_command('autocmd BufWritePre *.kt lua vim.lsp.buf.formatting_sync(nil, 1000)')
     end
 }
-
 
 require 'lspconfig'.lua_ls.setup {
     on_attach = on_attach,
