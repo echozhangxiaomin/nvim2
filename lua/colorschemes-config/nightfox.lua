@@ -9,4 +9,4 @@ require('nightfox').setup({
 })
 
 
-vim.cmd [[ colorscheme default ]]
+vim.cmd [[ colorscheme carbonfox ]]
