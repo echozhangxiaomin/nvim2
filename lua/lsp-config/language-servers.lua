@@ -74,11 +74,12 @@ require 'lspconfig'.jdtls.setup {
 
 require 'lspconfig'.kotlin_language_server.setup {
     cmd = { 'kotlin-language-server' },
-    on_attach = function(client)
-        -- 可选：在 KLS 连接时执行自定义设置
-        -- 例如：设置文件保存时自动格式化代码
-        vim.api.nvim_command('autocmd BufWritePre *.kt lua vim.lsp.buf.formatting_sync(nil, 1000)')
-    end
+    on_attach = on_attach
+        -- function(client)
+        -- -- 可选：在 KLS 连接时执行自定义设置
+        -- -- 例如：设置文件保存时自动格式化代码
+        -- -- vim.api.nvim_command('autocmd BufWritePre *.kt lua vim.lsp.buf.format()')
+    -- end
 }
 
 require 'lspconfig'.lua_ls.setup {
