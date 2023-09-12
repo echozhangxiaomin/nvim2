@@ -3,6 +3,7 @@ return require 'packer'.startup(function()
     use 'wbthomason/packer.nvim'
     -- theme settings
     use 'EdenEast/nightfox.nvim'
+    use 'vifm/vifm.vim'
     -- which key
     use 'linty-org/key-menu.nvim'
     -- nerdtree settings
@@ -11,7 +12,7 @@ return require 'packer'.startup(function()
     -- notify box
     -- use 'rcarriga/nvim-notify'
     use {'nvim-lualine/lualine.nvim',requires={'nvim-tree/nvim-web-devicons',opt = true}}
-    use 'romgrk/barbar.nvim'
+    -- use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-refactor'

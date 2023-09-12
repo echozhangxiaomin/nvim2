@@ -5,7 +5,7 @@ vim.opt.smarttab = true
 vim.opt.backspace = 'indent,eol,start'
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.laststatus = 3
+vim.opt.laststatus = 0
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
@@ -40,3 +40,4 @@ vim.go.cmdheight = 1
 -- vim.notify = require("notify")
 vim.cmd [[ set clipboard+=unnamedplus ]]
 vim.cmd [[ set mouse=a ]]
+vim.cmd [[ set wrap ]]
