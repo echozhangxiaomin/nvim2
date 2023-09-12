@@ -10,3 +10,4 @@ require('nightfox').setup({
 
 
 vim.cmd [[ colorscheme default ]]
+vim.cmd [[ hi NonText guifg=bg ]]
